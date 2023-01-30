@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="198px" preserveAspectRatio="none" style="width:287px;height:198px;background:#FFFFFF;" version="1.1" viewBox="0 0 287 198" width="287px" zoomAndPan="magnify"><defs><filter height="300%" id="fcb7e3ohdww04" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[ac9f0170bf68bbdb5e53fda7ea31ac82]
+cluster md.python.measure--><polygon fill="#FFFFFF" filter="url(#fcb7e3ohdww04)" points="16,6,162,6,169,28.4883,270,28.4883,270,191,16,191,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="169" y1="28.4883" y2="28.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="140" x="20" y="21.5352">md.python.measure</text><!--MD5=[2e42295458bb0bec21c9622a623eb29e]
+class Time--><rect codeLine="11" fill="#EBEBEB" filter="url(#fcb7e3ohdww04)" height="133.7305" id="Time" style="stroke:#333333;stroke-width:1.5;" width="222" x="32" y="41"/><ellipse cx="124.25" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#333333;stroke-width:1.0;"/><path d="M126.7231,63.1431 Q126.1421,63.4419 125.5029,63.5913 Q124.8638,63.7407 124.1582,63.7407 Q121.6514,63.7407 120.3315,62.0889 Q119.0117,60.437 119.0117,57.3159 Q119.0117,54.1865 120.3315,52.5347 Q121.6514,50.8828 124.1582,50.8828 Q124.8638,50.8828 125.5112,51.0322 Q126.1587,51.1816 126.7231,51.4805 L126.7231,54.2031 Q126.0923,53.6221 125.4988,53.3523 Q124.9053,53.0825 124.2744,53.0825 Q122.9297,53.0825 122.2449,54.1492 Q121.5601,55.2158 121.5601,57.3159 Q121.5601,59.4077 122.2449,60.4744 Q122.9297,61.541 124.2744,61.541 Q124.9053,61.541 125.4988,61.2712 Q126.0923,61.0015 126.7231,60.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="144.75" y="61.5352">Time</text><line style="stroke:#333333;stroke-width:1.5;" x1="33" x2="253" y1="73" y2="73"/><ellipse cx="43" cy="84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="152" x="52" y="87.6348">start: Optional[float] = None</text><ellipse cx="43" cy="96.9551" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="52" y="100.5898">end: Optional[float] = None</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="40" y="106.9102"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="196" x="52" y="113.5449">now: typing.Callable[[], float] = None</text><line style="stroke:#333333;stroke-width:1.0;" x1="33" x2="253" y1="119.8652" y2="119.8652"/><ellipse cx="43" cy="130.8652" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="52" y="134.5">time(self) -&gt; typing.Optional[float]</text><line style="stroke:#333333;stroke-width:1.0;" x1="33" x2="253" y1="140.8203" y2="140.8203"/><ellipse cx="43" cy="151.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="52" y="155.4551">__enter__() -&gt; 'Time'</text><ellipse cx="43" cy="164.7754" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="52" y="168.4102">__exit__(*, **) -&gt; None</text><!--MD5=[f6cd6edbf10889b67171daeeac097278]
+@startuml
+
+skinparam class {
+  BackgroundColor #ebebeb
+  ArrowColor      #333
+  BorderColor     #333
+}
+
+skinparam lineType ortho
+
+package md.python.measure {
+  class Time {
+    + start: Optional[float] = None
+    + end: Optional[float] = None
+    - now: typing.Callable[[], float] = None
+    - - -
+    + time(self) -> typing.Optional[float]
+    - - -
+    + __enter__() -> 'Time'
+    + __exit__(*, **) -> None
+  }
+}
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 19:16:42 MSK 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ru
+Country: RU
+--></g></svg>

@@ -1,0 +1,24 @@
+@startuml
+
+skinparam class {
+  BackgroundColor #ebebeb
+  ArrowColor      #333
+  BorderColor     #333
+}
+
+skinparam lineType ortho
+
+package md.python.measure {
+  class Time {
+    + start: Optional[float] = None
+    + end: Optional[float] = None
+    - now: typing.Callable[[], float] = None
+    ---
+    + time(self) -> typing.Optional[float]
+    ---
+    + __enter__() -> 'Time'
+    + __exit__(*, **) -> None
+  }
+}
+
+@enduml
