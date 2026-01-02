@@ -47,7 +47,9 @@ class TestTime:
                 pass
 
         # assert
-        assert measure.time() == 0.0
+        measure_time = measure.time()
+        assert isinstance(measure_time, float)
+        assert measure_time == 0.0
 
     def test_measure_reset_start_on_reuse(self) -> None:  # white/positive
         # arrange

@@ -20,7 +20,7 @@ class Time:
         self,
         start: typing.Optional[float] = None,
         end: typing.Optional[float] = None,
-        now: typing.Callable[[], float] = None
+        now: typing.Optional[typing.Callable[[], float]] = None
     ) -> None:
         self.start = start
         self.end = end
@@ -30,7 +30,7 @@ class Time:
         if self.start is None:
             return None
 
-        return max((self.end or self._now()) - self.start, 0)
+        return max((self.end or self._now()) - self.start, 0.0)
 
     def __enter__(self) -> 'Time':
         self.end = None  # for instance reuse case
